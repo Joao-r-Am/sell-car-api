@@ -1,6 +1,6 @@
 services:
   postgres:
-    image: postgis/postgis:15-3.3
+    image: postgres:latest
     container_name: sell_car
     environment:
       POSTGRES_USER: joaor
@@ -11,3 +11,6 @@ services:
     volumes:
       - postgres_data:/var/lib/postgresql/data
     restart: unless-stopped
+
+volumes:
+  postgres_data:
